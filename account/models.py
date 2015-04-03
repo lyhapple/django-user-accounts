@@ -40,6 +40,10 @@ class Account(models.Model):
         default=settings.LANGUAGE_CODE
     )
 
+    class Meta:
+        verbose_name = _("account")
+        verbose_name_plural = _("accounts")
+
     @classmethod
     def for_request(cls, request):
         if request.user.is_authenticated():
